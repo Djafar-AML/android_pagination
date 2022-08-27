@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.codelabs.paging.Injection
 import com.example.android.codelabs.paging.databinding.ActivityArticlesBinding
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
 class ArticleActivity : AppCompatActivity() {
@@ -58,6 +59,7 @@ class ArticleActivity : AppCompatActivity() {
                     articleAdapter.submitList(it)
                 }
             }
+            cancel()
         }
     }
 }

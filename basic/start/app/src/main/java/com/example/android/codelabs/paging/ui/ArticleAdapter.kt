@@ -28,7 +28,7 @@ import com.example.android.codelabs.paging.databinding.ArticleViewholderBinding
  */
 class ArticleAdapter : ListAdapter<Article, ArticleViewHolder>(ARTICLE_DIFF_CALLBACK) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ArticleViewHolder(
             ArticleViewholderBinding.inflate(
                 LayoutInflater.from(parent.context),
