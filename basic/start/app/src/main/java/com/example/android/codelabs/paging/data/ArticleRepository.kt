@@ -29,14 +29,6 @@ class ArticleRepository {
     /**
      * Exposed singular stream of [Article] instances
      */
-    val articleStream: Flow<List<Article>> = flowOf(
-        (0..500).map { number ->
-            Article(
-                id = number,
-                title = "Article $number",
-                description = "This describes article $number",
-                created = firstArticleCreatedTime.minusDays(number.toLong())
-            )
-        }
-    )
+
+    fun articlePagingSource() = ArticlePagingSource()
 }
